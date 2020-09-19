@@ -1,0 +1,10 @@
+express
+ejs
+bodyparser
+bcryptjs
+mongoose
+nodemon
+path
+bcrypt
+dotenv
+jsonwebtoken

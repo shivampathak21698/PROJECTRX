@@ -1,0 +1,38 @@
+Function of our project.
+
+User will sign-in.
+He will get the token, This token is associated with the database.
+He will insert data.
+If someone enters the token in client side, the inserted data will be shown to client.
+
+How to Approch
+
+Make a Log-in system.
+Add token to each account.
+Make two portal, one for some-one who will insert data, other user user who will enters the token.
+
+1- Login System (We will use passport-local)
+
+Sign UP
+
+Take name, email and password from user 
+Validate if user have filled all feild  
+Validate is password is matched with confirm password 
+Check if user is exits in database or not 
+Hash the password 
+Save it in Database 
+
+Login
+
+Take email and password from user 
+Check if user is that email is present in database or not 
+Dehash password and compare 
+If password matched send user to sucess page, if not send user to login page 
+Set cookies
+
+Logout
+
+Logout of session.
+When back button is pressed after logout authenticate it.
+
+

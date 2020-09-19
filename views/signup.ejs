@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- <% if (typeof err != 'undefined') {%>
+        <h1><%= err%></h1>
+    <%}%> -->
+ 
+ <% if(typeof err != 'undefined') {%>
+    <h1> <%= err %> </h1>
+    <%}%>
+
+
+
+    <h1> Welcome to signup page</h1>
+
+    <form action='' method='post'>
+        <input type="text" name="userName" placeholder="username"> <br>
+        <input type="text" name="email" placeholder="email" > <br>
+        <input type="text" name="password" placeholder="password" > <br>
+        <input type="text" name="confirmPassword" placeholder="confirm password" > <br>
+        <button type="submit"> Sign UP </button>
+
+    </form>
+
+<!-- <button type="submit" href='/login'> Login </button> -->
+</body>
+</html>

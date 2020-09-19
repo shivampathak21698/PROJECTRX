@@ -1,0 +1,37 @@
+always use else or else if with if
+
+use catch with then
+.
+use if with then
+ex
+
+data.save()
+.then((result) => {
+    if(result){
+        console.log()
+    } 
+
+    else{
+
+    }
+}).catch((err) => {
+    console.log(err)
+}) 
+
+
+///////token
+
+const jwt = require('jsonwebtoken')
+
+const secret_key = 'secret'
+
+const token = jwt.sign({
+    email: email,
+    userID: data._id
+}
+secret_key,
+{
+    expiresIN : "1h"
+}
+)
+
