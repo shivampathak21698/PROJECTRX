@@ -105,7 +105,7 @@ router.post('/login', (req, res) => {
 
         DBuserSL.findOne({ email: email }).then((data) => {
             if (data) {
-                // console.log(data.password)
+                console.log(data.password)
                 bcrypt.compare(password, data.password, (err, result) => {
                     if (err) throw err;
                     if (result) {
@@ -120,9 +120,9 @@ router.post('/login', (req, res) => {
                         );
                         
                         
-                        console.log('token is ',token)
+                        console.log('sucessfull login')
                         // res.render('login', ({ 'err': token }))
-                        res.redirect('/welcome')
+                        res.json({"msg":"sucessfull login", "token":token});
                         // res.json({msg : 'password matched',token})
                     }
                     else {
@@ -140,8 +140,17 @@ router.post('/login', (req, res) => {
 
 
 
-router.get('/welcome', verifyToken, function(req, res, next) {
-    res.render('welcome')  
+router.get('/welcome', verifyToken, (req, res) => {
+    DBuserSL.find()
+    .then((data) => {
+        if(data){
+            res.send(data)
+        }
+        else{
+            res.send("data not found")
+        }
+    })  
+    // res.send("hello from welcome")
   });
 
 
